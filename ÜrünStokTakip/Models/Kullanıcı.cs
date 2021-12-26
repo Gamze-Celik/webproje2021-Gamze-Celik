@@ -16,8 +16,8 @@ namespace ÜrünStokTakip.Models
     {
         public Kullanıcı()
         {
-            this.Satislar = new HashSet<Satislar>();
             this.Sepet = new HashSet<Sepet>();
+            this.Satislar = new HashSet<Satislar>();
         }
     
         public int Id { get; set; }
@@ -29,7 +29,7 @@ namespace ÜrünStokTakip.Models
         public string SifreTekrar { get; set; }
         public string Rol { get; set; }
     
-        public virtual ICollection<Satislar> Satislar { get; set; }
         public virtual ICollection<Sepet> Sepet { get; set; }
+        public virtual ICollection<Satislar> Satislar { get; set; }
     }
 }

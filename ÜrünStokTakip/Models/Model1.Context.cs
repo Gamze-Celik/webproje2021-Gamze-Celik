@@ -27,9 +27,9 @@ namespace ÜrünStokTakip.Models
     
         public DbSet<Kategori> Kategori { get; set; }
         public DbSet<Kullanıcı> Kullanıcı { get; set; }
-        public DbSet<Satislar> Satislar { get; set; }
-        public DbSet<Sepet> Sepet { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public DbSet<Sepet> Sepet { get; set; }
+        public DbSet<Satislar> Satislar { get; set; }
         public DbSet<Urun> Urun { get; set; }
     }
 }

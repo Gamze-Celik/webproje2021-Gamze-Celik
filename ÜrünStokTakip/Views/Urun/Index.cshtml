@@ -5,7 +5,17 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        <div style="width:25%; float:left">
+            @Html.TextBox("ara", null, new { @class = "form-control", @placeholder = "Ürün adı arayınız" })
+            <div style="float:left">
+                <input type="submit" name="btn" value="Ara" class="btn btn-info" />
+            </div>
+        </div>
+    }
+</div>
 <a href="/Urun/Ekle" class="btn btn-primary">Ekle</a>
 <br />
 <br />
@@ -18,13 +28,13 @@
         <th>Popüler</th>
         <th>Fiyat</th>
         <th>Stok/th>
-        <th>
-            Kategori/th>
+        <th>Kategori</th>
             @if (User.IsInRole("A"))
             {
             <th>Sil</th>
             <th>Düzenle</th>
-        }
+            }
+
             @if (User.IsInRole("U"))
             {
                 <th>Sepete Ekle</th>
@@ -49,19 +59,17 @@
         }
         </td>
 
-
-        <td>@item.Populer</td>
         <td>@item.Fiyat</td>
         <td>@item.Stok</td>
-        <td>@item.Kategori</td>
+        <td>@item.Kategori.Ad</td>
         @if (User.IsInRole("A"))
         {
-            <td>@Html.ActionLink("Sil", "Sil", new { @class = "btn btn-danger", onclick = "return confirm('Silmek istiyor musunuz ?)" })</td>
-            <td><a href="/Urun/Guncelle/@item.ID" class="btn btn-warning"></a></td>
+        <td>@Html.ActionLink("Sil", "Sil", new { id = item.id }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek istiyor musunuz ?')" })</td>
+            <td><a href="/Urun/Guncelle/@item.id" class="btn btn-warning"></a></td>
         }
         @if (User.IsInRole("U"))
         {
-            <td><a href="/Sepet/SepeteEkle/@item.ID" class="btn btn-success">Sepete Ekle</a> </td>
+            <td><a href="/Sepet/SepeteEkle/@item.id" class="btn btn-success">Sepete Ekle</a> </td>
         }
 
     </tr>

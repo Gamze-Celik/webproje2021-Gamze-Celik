@@ -7,13 +7,15 @@
       <Diagram DiagramId="3124714dab74458ebe89247926368b93" Name="Diagram1">
         <EntityTypeShape EntityType="Model.Kategori" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Kullanıcı" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Satislar" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Sepet" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Urun" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="Model.FK_Urun_Kategori" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Satislar_Kullanıcı" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.FK_Sepet_Kullanıcı" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.Sepet" Width="1.5" PointX="10.25" PointY="1.875" />
+        <AssociationConnector Association="Model.FK_Sepet_Kullanıcı" />
+        <EntityTypeShape EntityType="Model.Satislar" Width="1.5" PointX="13.25" PointY="1.875" />
+        <EntityTypeShape EntityType="Model.Urun" Width="1.5" PointX="8" PointY="0.875" />
+        <AssociationConnector Association="Model.FK_Urun_Kategori" />
+        <AssociationConnector Association="Model.FK_Satislar_Kullanıcı" />
+        <AssociationConnector Association="Model.FK_Satislar_Urun" />
+        <AssociationConnector Association="Model.FK_Sepet_Urun" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

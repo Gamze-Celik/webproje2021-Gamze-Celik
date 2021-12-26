@@ -49,6 +49,12 @@
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -106,6 +112,7 @@
     <Content Include="Content\images\resim2.jpg" />
     <Content Include="Content\images\resim3.jpg" />
     <Content Include="Content\images\sepet.png" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Global.asax" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -1154,6 +1161,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\SatisController.cs" />
+    <Compile Include="Controllers\SepetController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1204,6 +1214,18 @@
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Urun\Index.cshtml" />
+    <Content Include="Views\Urun\Ekle.cshtml" />
+    <Content Include="Views\Urun\Guncelle.cshtml" />
+    <Content Include="Views\Urun\KritikStok.cshtml" />
+    <Content Include="Views\Urun\StokCount.cshtml" />
+    <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Kategori\Ekle.cshtml" />
+    <Content Include="Views\Kategori\Guncelle.cshtml" />
+    <Content Include="Views\Sepet\Index.cshtml" />
+    <Content Include="Views\Sepet\SepetCount.cshtml" />
+    <Content Include="Views\Satis\Index.cshtml" />
+    <Content Include="Views\Satis\islem.cshtml" />
+    <Content Include="Views\Satis\SatinAl.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

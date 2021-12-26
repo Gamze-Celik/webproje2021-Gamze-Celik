@@ -14,6 +14,12 @@ namespace ÜrünStokTakip.Models
     
     public partial class Urun
     {
+        public Urun()
+        {
+            this.Satislar = new HashSet<Satislar>();
+            this.Sepet = new HashSet<Sepet>();
+        }
+    
         public int Id { get; set; }
         public string Ad { get; set; }
         public byte[] Açıklama { get; set; }
@@ -24,5 +30,7 @@ namespace ÜrünStokTakip.Models
         public Nullable<int> KategoriId { get; set; }
     
         public virtual Kategori Kategori { get; set; }
+        public virtual ICollection<Satislar> Satislar { get; set; }
+        public virtual ICollection<Sepet> Sepet { get; set; }
     }
 }

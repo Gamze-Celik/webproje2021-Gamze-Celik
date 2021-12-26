@@ -23,5 +23,6 @@ namespace ÜrünStokTakip.Models
         public Nullable<int> KullanıcıId { get; set; }
     
         public virtual Kullanıcı Kullanıcı { get; set; }
+        public virtual Urun Urun { get; set; }
     }
 }

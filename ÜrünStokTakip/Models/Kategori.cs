@@ -22,6 +22,7 @@ namespace ÜrünStokTakip.Models
         public int Id { get; set; }
         public string Ad { get; set; }
         public string Açıklama { get; set; }
+        public Nullable<bool> Durum { get; set; }
     
         public virtual ICollection<Urun> Urun { get; set; }
     }
